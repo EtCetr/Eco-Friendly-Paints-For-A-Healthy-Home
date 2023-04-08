@@ -1,0 +1,180 @@
+@media ( max-width:1900px )
+// стандартное разрешение ПК
+    
+@media ( max-width:1145px )
+    .section
+        &-img
+            &_grid
+                grid-template-columns: repeat(4, minmax(auto, 240px)) 
+                grid-template-rows: repeat(2, minmax(0, 240px))  
+        &-circle
+            max-height: 240px 
+            max-width: 240px  
+  
+@media ( max-width:1000px )
+    .header-item
+        min-width: 29vw
+    .section
+        &-img
+            max-height: 450px
+            &__card
+                min-height: 450px
+                flex-shrink: 2
+                &-header
+                    font-size: 40px
+                    line-height: normal
+                &_button
+                    &-header
+                        font-size: 40px
+                        line-height: normal 
+                &_link
+                    grid-area: 3/1/-1/-1                           
+            &_grid
+                grid-template-columns: repeat(2, 269px) 
+                grid-template-rows: repeat(2, minmax(0, 269px)) 546px 
+            &__circle
+                max-height: 269px 
+                max-width: 269px
+        &-text
+            padding: 0 15vw 
+        &-image
+            max-height: 269px 
+            max-width: 269px  
+        &-no
+            &__header
+                font-size: 160px
+                line-height: normal
+
+
+@media ( max-width:800px )  
+    .header-item
+        min-width: 35vw
+    .section
+        &-img
+            display: flex
+            flex-wrap: wrap
+            max-height: none
+            &_button
+                flex-wrap: wrap-reverse
+            &__card
+                min-height: 546px
+                &_link
+                    min-height: 480px
+        &-text
+            font-size: 30px
+            line-height: normal
+            padding: 0 5vw
+        &-no
+            &__header
+                font-size: 120px
+
+@media ( max-width:650px )  
+    .header-item
+        min-width: 43vw
+    .section
+        &-img
+            display: grid
+            grid-template-rows: repeat(2, 1fr)
+            &__card
+                min-height: auto
+                &_button
+                    order: 2               
+            &_grid
+                grid-template-columns: repeat(2, minmax(150px, 269px)) 
+                grid-template-rows: repeat(2, minmax(150px, 200px)) minmax(300px, 400px)
+        &-circle    
+            max-width: 55%
+            max-height: 55%
+    .footer
+        &__main
+            grid-template-columns: auto
+            grid-template-rows: repeat(2, 1fr)  
+        &-end
+            &__bottom
+                display: grid
+                grid-template-rows: repeat(2, 1fr)
+                justify-content: stretch 
+                row-gap: 10px 
+                &-left
+                    grid-area: 1/1/2/2
+                    justify-content: space-between
+                    &__number
+                        margin-right: 0
+                &-right
+                    gap: 0
+                    justify-content: space-between
+    .signature
+        &::after
+            top: auto
+            bottom: 0
+            height: 2px
+            width: 100%  
+
+    .list:last-child
+        position: relative
+        right: 11px
+          
+@media ( max-width:480px )  
+    .header-item
+        min-width: 54vw  
+
+    .section-text
+        font-size: 25px
+    .nav
+        display: grid
+        grid-template-rows: repeat(2, auto)
+        grid-auto-flow: column
+        grid-row-gap: 10px
+        grid-column-gap: 17px
+        justify-content: center
+        margin-bottom: 35px
+        &-menu__item_name
+            margin-right: 17px
+    // Разобраться с display в media-queries. Решение: @import media нужно ставить в конце док-а со стайлами, чтобы перебивало остальные параметры
+
+    .list:nth-child(4)
+        position: relative
+        right: 15px
+
+    .list:nth-child(3)
+        position: relative
+        right: 7px
+                    
+@media ( max-width:480px )  
+    .section
+        &-title_little
+            font-size: 95px
+            line-height: normal
+        &-product
+            &s
+                grid-column-gap: 0
+            &__img
+                width: 130px
+                height: 130px
+        &-no__header
+            font-size: 95px
+        &-img
+            &__card
+                &-header
+                    font-size: 28px
+                &_button-header
+                    font-size: 28px    
+                &-link
+                    font-size: 18px
+                    line-height: normal           
+            &_grid
+                grid-template-columns: repeat(2, minmax(150px, 269px)) 
+                grid-template-rows: repeat(2, minmax(150px, 160px)) minmax(300px, 320px)
+
+    .signature
+        &__header
+            font-size: 30px
+        &__input
+            margin-bottom: 40px
+    
+    .footer-end__title-text
+        font-size: 60px
+
+    .contacts
+        padding-left: 50px 
+        justify-content: space-evenly
